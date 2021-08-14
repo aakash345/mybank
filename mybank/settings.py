@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from django.contrib import messages 
-
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +27,7 @@ SECRET_KEY = '1esq3x)d50w(nv)8c8g2t)j&kd9oov+jisx+(=&g2%kn95pm(j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','mybankspark.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','mybankspark.herokuapp.com']
 
 
 # Application definition
@@ -130,3 +130,5 @@ STATICFILES_DIRS = [
 MESSAGE_TAGS = {
     messages.ERROR:'danger'
 }
+
+django_heroku.settings(locals())
