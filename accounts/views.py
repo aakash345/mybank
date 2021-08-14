@@ -23,6 +23,9 @@ def userView(request,userid):
             y = customer.objects.get(id=receiver_id)
             sname=x.name
             rname=y.name
+            if int(amount)<=0:
+                messages.error(request,"Invalid Amount")
+                return render(request,"accounts/user.html",{"user":myuser,"alluser":alluser,"name":name})
             if int(amount)<=x.curr_balance:
                 x.curr_balance = int(x.curr_balance)-int(amount)
                 y.curr_balance = int(y.curr_balance)+int(amount)
