@@ -26,7 +26,7 @@ SECRET_KEY = '1esq3x)d50w(nv)8c8g2t)j&kd9oov+jisx+(=&g2%kn95pm(j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://mybankspark.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
