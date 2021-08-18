@@ -6,6 +6,7 @@ from .models import customer,transactions
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('aakash49gupta', admin.site.urls),
     path('search', views.search, name="search"),
     path('transaction', views.transaction, name="transaction"),
     path('about', views.about, name="about"),

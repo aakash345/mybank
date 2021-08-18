@@ -129,4 +129,4 @@ STATICFILES_DIRS = [
 MESSAGE_TAGS = {
     messages.ERROR:'danger'
 }
-
+print(STATIC_ROOT)
